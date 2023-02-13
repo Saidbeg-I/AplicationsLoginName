@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="X8g-Ot-YfM">
             <objects>
-                <viewController id="m7d-4a-mQI" customClass="LoginViewController" customModule="AplicationLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m7d-4a-mQI" customClass="LoginViewController" customModule="AplicationsLoginName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="teD-5q-pmW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,12 +90,12 @@
         <!--Welkome View Controller-->
         <scene sceneID="i3O-dP-XOp">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="NeA-sc-MbX" customClass="WelkomeViewController" customModule="AplicationLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="NeA-sc-MbX" customClass="WelkomeViewController" customModule="AplicationsLoginName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4s0-WC-XrZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CF-5w-dlF" customClass="GradientView" customModule="AplicationLogin" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CF-5w-dlF" customClass="GradientView" customModule="AplicationsLoginName" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
