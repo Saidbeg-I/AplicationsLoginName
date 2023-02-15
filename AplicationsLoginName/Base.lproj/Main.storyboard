@@ -40,7 +40,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="NeA-sc-MbX" kind="presentation" identifier="" id="TNC-In-3i6"/>
+                                    <action selector="pressedLoginButton" destination="m7d-4a-mQI" eventType="touchUpInside" id="RVw-Mt-KRX"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ly2-td-Q34">
@@ -51,14 +51,16 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name"/>
                                         <connections>
+                                            <action selector="loginPressed:" destination="m7d-4a-mQI" eventType="touchUpInside" id="nou-jh-fhO"/>
                                             <action selector="userNameAlertButton" destination="m7d-4a-mQI" eventType="touchUpInside" id="JqY-GZ-21Z"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqf-pH-5xP">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqf-pH-5xP">
                                         <rect key="frame" x="170.66666666666663" y="0.0" width="140.33333333333337" height="48"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password ?"/>
                                         <connections>
+                                            <action selector="loginPressed:" destination="m7d-4a-mQI" eventType="touchUpInside" id="bFH-87-iG9"/>
                                             <action selector="passwordAlertButton" destination="m7d-4a-mQI" eventType="touchUpInside" id="i1I-Ew-4Mt"/>
                                         </connections>
                                     </button>
@@ -81,6 +83,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="B9x-Py-1Bz" id="nqF-ag-y4S"/>
                         <outlet property="passwordTextField" destination="Zgl-9v-JQv" id="Y9b-pV-s9z"/>
+                        <segue destination="NeA-sc-MbX" kind="presentation" identifier="goToWelkome" id="oYN-hj-9zi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhL-xV-Knd" sceneMemberID="firstResponder"/>
@@ -120,14 +123,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="ayZ-cH-13w">
                                 <rect key="frame" x="40" y="94" width="295" height="46.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="t7U-Qo-a5X">
-                                        <rect key="frame" x="0.0" y="0.0" width="138.66666666666666" height="46.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                        <color key="textColor" systemColor="systemMintColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="         " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-nZ-nhT">
-                                        <rect key="frame" x="224.66666666666671" y="0.0" width="70.333333333333343" height="46.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="         Welkome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-nZ-nhT">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="46.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                         <color key="textColor" systemColor="systemMintColor"/>
                                         <nil key="highlightedColor"/>
