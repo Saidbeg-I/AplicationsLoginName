@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63100C1829A389D60034C259 /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63100C1729A389D60034C259 /* UserModels.swift */; };
+		63100C1E29A4E2D00034C259 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63100C1D29A4E2D00034C259 /* UserInfoViewController.swift */; };
+		63100C2029A4F68C0034C259 /* DiscriptionUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63100C1F29A4F68C0034C259 /* DiscriptionUserViewController.swift */; };
 		63D6B7A2299A3275001049A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6B7A1299A3275001049A1 /* AppDelegate.swift */; };
 		63D6B7A4299A3275001049A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6B7A3299A3275001049A1 /* SceneDelegate.swift */; };
 		63D6B7A6299A3275001049A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6B7A5299A3275001049A1 /* LoginViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63100C1729A389D60034C259 /* UserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModels.swift; sourceTree = "<group>"; };
+		63100C1D29A4E2D00034C259 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		63100C1F29A4F68C0034C259 /* DiscriptionUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscriptionUserViewController.swift; sourceTree = "<group>"; };
 		63D6B79E299A3275001049A1 /* AplicationsLoginName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AplicationsLoginName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D6B7A1299A3275001049A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63D6B7A3299A3275001049A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63100C1329A3724C0034C259 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63D6B7A5299A3275001049A1 /* LoginViewController.swift */,
+				63D6B7B5299A34F9001049A1 /* WelkomeViewController.swift */,
+				63100C1D29A4E2D00034C259 /* UserInfoViewController.swift */,
+				63100C1F29A4F68C0034C259 /* DiscriptionUserViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63100C1429A382C00034C259 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63100C1729A389D60034C259 /* UserModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63100C1529A382EA0034C259 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				63D6B7A7299A3275001049A1 /* Main.storyboard */,
+				63D6B7AC299A3278001049A1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		63100C1629A3833F0034C259 /* SuportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				63D6B7B7299A3544001049A1 /* GradientsSettingColor.swift */,
+				63D6B7A1299A3275001049A1 /* AppDelegate.swift */,
+				63D6B7A3299A3275001049A1 /* SceneDelegate.swift */,
+			);
+			path = SuportFiles;
+			sourceTree = "<group>";
+		};
 		63D6B795299A3275001049A1 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +104,11 @@
 		63D6B7A0299A3275001049A1 /* AplicationsLoginName */ = {
 			isa = PBXGroup;
 			children = (
-				63D6B7A1299A3275001049A1 /* AppDelegate.swift */,
-				63D6B7A3299A3275001049A1 /* SceneDelegate.swift */,
-				63D6B7B7299A3544001049A1 /* GradientsSettingColor.swift */,
-				63D6B7A5299A3275001049A1 /* LoginViewController.swift */,
-				63D6B7B5299A34F9001049A1 /* WelkomeViewController.swift */,
-				63D6B7A7299A3275001049A1 /* Main.storyboard */,
+				63100C1329A3724C0034C259 /* ViewControllers */,
+				63100C1429A382C00034C259 /* Models */,
+				63100C1529A382EA0034C259 /* Storyboards */,
+				63100C1629A3833F0034C259 /* SuportFiles */,
 				63D6B7AA299A3278001049A1 /* Assets.xcassets */,
-				63D6B7AC299A3278001049A1 /* LaunchScreen.storyboard */,
 				63D6B7AF299A3278001049A1 /* Info.plist */,
 			);
 			path = AplicationsLoginName;
@@ -145,8 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D6B7A6299A3275001049A1 /* LoginViewController.swift in Sources */,
+				63100C1829A389D60034C259 /* UserModels.swift in Sources */,
 				63D6B7B6299A34F9001049A1 /* WelkomeViewController.swift in Sources */,
 				63D6B7A2299A3275001049A1 /* AppDelegate.swift in Sources */,
+				63100C2029A4F68C0034C259 /* DiscriptionUserViewController.swift in Sources */,
+				63100C1E29A4E2D00034C259 /* UserInfoViewController.swift in Sources */,
 				63D6B7A4299A3275001049A1 /* SceneDelegate.swift in Sources */,
 				63D6B7B8299A3544001049A1 /* GradientsSettingColor.swift in Sources */,
 			);

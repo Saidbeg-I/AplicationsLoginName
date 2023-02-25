@@ -10,17 +10,41 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
+    
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     
-    private let user = "Naya"
-    private let password = "Alieva"
-    // MARK: - Tranthition Func
+    private var user = User.getUserData()
+    
+    
+    
+    // MARK: - Prepare Func
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welkomeVC = segue.destination as? WelkomeViewController else { return }
-        welkomeVC.user = user
+        guard nameTextField.text == user.login, passwordTextField.text == user.password else {
+
+            showAlertOfEmptyValue(
+                with: "Invalid logon or password",
+                and: "Please enter correct login and password "
+            )
+            return
+        }
+        
+        guard  let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard  let viewControllers = tabBarVC.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welkomeVC = viewController as? WelkomeViewController {
+                welkomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                navigationVC.navigationItem.title = user.person.fullName
+                guard let userInfoVC = navigationVC.topViewController as? UserInfoViewController else {
+                return
+                }
+                userInfoVC.user = user
+            }
+        }
     }
     
     
@@ -33,17 +57,8 @@ final class LoginViewController: UIViewController {
     // MARK: - IBAction Button
     
     @IBAction func pressedLoginButton() {
-        guard nameTextField.text == user && passwordTextField.text == password else {
-
-            showAlertOfEmptyValue(
-                with: "Invalid logon or password",
-                and: "Please enter correct login and password "
-            )
-            return
-        }
         
         performSegue(withIdentifier: "goToWelkome", sender: nil)
-        
         
     }
     
@@ -55,8 +70,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlertOfEmptyValue(with:"Ooops!", and: "Your password \(user) 🤓")
-        : showAlertOfEmptyValue(with: "Ooops!", and: "Your password \(password) 🤓")
+        ? showAlertOfEmptyValue(with:"Ooops!", and: "Your password \(user.person.name) 🤓")
+        : showAlertOfEmptyValue(with: "Ooops!", and: "Your password \(user.password) 🤓")
         
     }
     

@@ -7,16 +7,16 @@
 
 import UIKit
 
-class WelkomeViewController: UIViewController {
+final class WelkomeViewController: UIViewController {
 
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var emodjiLabel: UILabel!
     
-    var user = ""
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "Welkome \(user)"
+        userNameLabel.text = "Welkome \(user.person.fullName)"
         emodjiLabel.text = "👋"
         
     }
