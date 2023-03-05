@@ -42,11 +42,12 @@ final class LoginViewController: UIViewController {
                 guard let userInfoVC = navigationVC.topViewController as? UserInfoViewController else {
                 return
                 }
+                userInfoVC.navigationItem.title = user.person.fullName
                 userInfoVC.user = user
             }
         }
     }
-    
+    // MARK: - Settint keyboard tuch pressed
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

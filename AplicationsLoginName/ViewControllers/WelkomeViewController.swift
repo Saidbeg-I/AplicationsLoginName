@@ -16,7 +16,8 @@ final class WelkomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "Welkome \(user.person.fullName)"
+        view.addVerticalGradientLayer()
+        userNameLabel.text = "Welkome , \(user.person.fullName)"
         emodjiLabel.text = "👋"
         
     }

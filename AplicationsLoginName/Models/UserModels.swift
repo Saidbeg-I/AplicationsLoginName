@@ -22,18 +22,20 @@ struct Person {
     let surName: String
     let age: String
     let countrie: String
+    let photo: String
     let infoPerson: String
     
     var fullName: String {
-        "\(name)" +  "\(surName)"
+        "\(name)" + "  " + "\(surName)"
         
     }
     static func getPerson() -> Person {
-        Person(name: "Naya",
-               surName: "Alieva",
-               age: "22",
+        Person(name: "Saidbeg",
+               surName: "Imamagomedov",
+               age: "27",
                countrie: "Russia",
-               infoPerson: "Наиля Алиева, мне 22 лет , я родилась в России, я учусь в РНИМУ на 5 курсе , хочу стать высококвалифицырованным специалистом в своей области ,и я люблю все то чем я сейчас занимаюсь"
+               photo: "Saidbeg Imamagomedov",
+               infoPerson: "Саидбег Имамагомедов, мне 27 лет , я родиля в России, я учусь в Swifbook , хочу стать высококвалифицырованным специалистом в своей области ,и я люблю все то чем я сейчас занимаюсь"
                )
     }
 }
